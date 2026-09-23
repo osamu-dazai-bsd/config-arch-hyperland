@@ -1,2 +1,2 @@
 # config-arch-hyperland
-Конфіг Hyperland,GRUB,Plymouth
+Конфіг Hyperland,GRUB,Plymouth,kitty,hyprpaper
