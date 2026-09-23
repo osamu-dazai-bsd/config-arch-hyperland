@@ -1,0 +1,14 @@
+# Вимикаємо перенос рядка, щоб усе було в один ряд
+add_newline = false
+
+# Порядок відображення: Юзер -> Стрілка-роздільник -> Папка -> Стрілка-кінець
+format = """[ satoshi@arch-hyperland ](bg:#5a2c85 fg:#ffffff)[$directory](bg:#00a2ff fg:#ffffff) """
+
+[directory]
+style = "bg:#00a2ff fg:#ffffff"
+format = " $path "
+truncation_length = 5
+truncate_to_repo = false
+
+[character]
+disabled = true

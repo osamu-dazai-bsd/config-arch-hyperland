@@ -1,0 +1,124 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.75); /* Полупрозрачный фон (Catppuccin/TokyoNight vibe) */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: #c0caf5;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Рабочие столы */
+#workspaces {
+    background: rgba(36, 40, 59, 0.6);
+    margin: 5px 4px;
+    padding: 0 4px;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #7aa2f7;
+    border-radius: 6px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(122, 162, 247, 0.2);
+    color: #c0caf5;
+}
+
+#workspaces button.active {
+    background: #7aa2f7;
+    color: #1a1b26;
+}
+
+#workspaces button.urgent {
+    background: #f7768e;
+    color: #1a1b26;
+}
+
+/* Панель запущенных приложений */
+#taskbar {
+    background: rgba(36, 40, 59, 0.4);
+    margin: 5px 4px;
+    padding: 0 6px;
+    border-radius: 8px;
+}
+
+#taskbar button {
+    padding: 0 4px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+#taskbar button.active {
+    background: rgba(122, 162, 247, 0.25);
+}
+
+/* Общие стили для правых и центральных модулей */
+#clock,
+#power-profiles-daemon,
+#pulseaudio,
+#network,
+#battery,
+#language,
+#tray {
+    background: rgba(36, 40, 59, 0.6);
+    padding: 2px 10px;
+    margin: 5px 3px;
+    border-radius: 8px;
+    color: #c0caf5;
+}
+
+/* Индивидуальные акценты цветов */
+#clock {
+    color: #bb9af7;
+}
+
+#power-profiles-daemon {
+    color: #e0af68;
+}
+
+#pulseaudio {
+    color: #7dcfff;
+}
+
+#network {
+    color: #9ece6a;
+}
+
+#battery {
+    color: #73daca;
+}
+
+#battery.warning {
+    color: #e0af68;
+}
+
+#battery.critical {
+    color: #f7768e;
+    animation: blink 1s infinite steps(1);
+}
+
+#language {
+    color: #bb9af7;
+}
+
+@keyframes blink {
+    to {
+        background-color: #f7768e;
+        color: #1a1b26;
+    }
+}

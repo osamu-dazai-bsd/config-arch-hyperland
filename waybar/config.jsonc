@@ -1,0 +1,129 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    // Порядок модулей
+    "modules-left": [
+        "hyprland/workspaces",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "power-profiles-daemon",
+        "pulseaudio",
+        "network",
+        "battery",
+        "keyboard-state",
+        "hyprland/language",
+        "tray"
+    ],
+
+    // Модуль: Рабочие столы
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    // Модуль: Запущенные приложения (ТГ, ДС и т.д.)
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 16,
+        "icon-theme": "Papirus",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "ignore-list": [
+            "Alacritty",
+            "Foot"
+        ]
+    },
+
+    // Модуль: Время (по центру)
+    "clock": {
+        "format": "  {:%d %b  •  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    // Модуль: Режим работы ноутбука (Power Profiles)
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Режим питания: {profile}\nДрайвер: {driver}",
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
+    // Модуль: Звук
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Модуль: Интернет (Wi-Fi)
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰌗  Ethernet",
+        "format-disconnected": "󰖪  Нет сети",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "max-length": 20
+    },
+
+    // Модуль: Заряд батареи
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    // Модуль: Язык клавиатуры
+    // Модуль: Язык клавиатуры
+    "hyprland/language": {
+        "format": "  {}",
+        "format-English (US)": "EN",
+        "format-Russian": "RU",
+        "format-Ukrainian": "UA",
+        "keyboard-name": "ite-tech.-inc.-ite-device(8176)-keyboard"
+    },
+    // Трей
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    }
+}
