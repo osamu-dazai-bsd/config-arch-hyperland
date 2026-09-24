@@ -1,5 +1,5 @@
 # config-arch-hyperland
-Конфіг Hyperland,GRUB,starship,kitty,hyprpaper,waybar,fastfetch
+Конфіг Hyperland,plymouthd,GRUB,starship,kitty,hyprpaper,waybar,fastfetch
 
 
 Зворотній зв'язок в тг @satoshi_2026
